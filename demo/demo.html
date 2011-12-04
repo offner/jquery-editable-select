@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+    <script src="../jquery.editableSelect.js" ></script>
+    <script>
+      $(function(){
+        $('.makeEditable').editableSelect().change(function(){
+          var log = $('#log');
+          log.text(log.text() + 'Select: ' + this.id + ' changed. Value: ' + this.value  + '\r\n');
+        });
+      });
+    </script>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div style="float:left; width: 300px;">
+      <select id="1" class="makeEditable">
+        <option value="Red">Red</option>
+        <option value="Orange">Orange</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+        <option value="Indigo">Indigo</option>
+        <option value="Violet">Violet</option>
+      </select>
+    </div>
+     <div style="float:left; width: 300px;">
+      <select id="2" class="makeEditable">
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Four">Four</option>
+        <option value="Five">Five</option>
+        <option value="Six">Six</option>
+        <option value="Seven">Seven</option>
+      </select>
+    </div>
+    <textarea id="log" rows="25" cols="30" style="width:500px; border: 1px solid blue;" ></textarea>
+  </body>
+</html>

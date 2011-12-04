@@ -1,0 +1,20 @@
+A jQuery plugin that adds a user entered value to a select element.
+
+How it works:
+1) The select element's options are copied to a list.
+2) A textbox is put in place of the select element. The select is then hidden.
+3) When the textbox gains focus the list is displayed. You can choose the option with the mouse or arrow keys.
+4) When an item is selected the textbox and the original select element have their values updated. This is important as it allows you to make the select element editable without changing any data binding code which may already be wired to the select element.
+5) If a user enters custom text in the textbox an option is appended to the original select element. That option is given the attribute:
+   data-jqes="editable"
+   If another change is made to the textbox this option element is updated to the new value.
+
+Other notes:
+The plugin assumes that if you are allowing a custom entry the option element's values are equal to the text value.
+The plugin will attempt to display the list without a scroll bar by using space above or below. Preference is given to showing the list under the textbox.
+
+Plugin Options:
+enableiframe - Defaults to false (disabled). Enable for IE 6/7 support.
+
+Live Demo:
+http://dont-panic.ws/demo/demo.html
