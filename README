@@ -15,6 +15,3 @@ The plugin will attempt to display the list without a scroll bar by using space 
 
 Plugin Options:
 enableiframe - Defaults to false (disabled). Enable for IE 6/7 support.
-
-Live Demo:
-http://dont-panic.ws/demo/demo.html
